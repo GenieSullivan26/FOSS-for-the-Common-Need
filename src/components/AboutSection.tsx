@@ -6,6 +6,66 @@ import { useAccessibility } from '../context/AccessibilityContext';
 export const AboutSection: React.FC = () => {
   const { t } = useAccessibility();
 
+  // Dynamic Localized Economic Pillars
+  const economicPillars = [
+    {
+      id: 'purchasing-power',
+      category: t('p1Category'),
+      title: t('p1Title'),
+      problem: t('p1Problem'),
+      solution: t('p1Solution'),
+      metric: t('p1Metric'),
+    },
+    {
+      id: 'business-models',
+      category: t('p2Category'),
+      title: t('p2Title'),
+      problem: t('p2Problem'),
+      solution: t('p2Solution'),
+      metric: t('p2Metric'),
+    },
+    {
+      id: 'nonprofit-sustainability',
+      category: t('p3Category'),
+      title: t('p3Title'),
+      problem: t('p3Problem'),
+      solution: t('p3Solution'),
+      metric: t('p3Metric'),
+    },
+    {
+      id: 'public-finance',
+      category: t('p4Category'),
+      title: t('p4Title'),
+      problem: t('p4Problem'),
+      solution: t('p4Solution'),
+      metric: t('p4Metric'),
+    },
+  ];
+
+  // Dynamic Localized Core Activities
+  const coreActivities = [
+    {
+      title: t('act1Title'),
+      subtitle: t('act1Subtitle'),
+      description: t('act1Desc'),
+    },
+    {
+      title: t('act2Title'),
+      subtitle: t('act2Subtitle'),
+      description: t('act2Desc'),
+    },
+    {
+      title: t('act3Title'),
+      subtitle: t('act3Subtitle'),
+      description: t('act3Desc'),
+    },
+    {
+      title: t('act4Title'),
+      subtitle: t('act4Subtitle'),
+      description: t('act4Desc'),
+    },
+  ];
+
   // Activities Carousel State
   const [currentSlide, setCurrentSlide] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -34,7 +94,7 @@ export const AboutSection: React.FC = () => {
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
 
-    if (isLeftSwipe && currentSlide < CORE_ACTIVITIES.length - 1) {
+    if (isLeftSwipe && currentSlide < coreActivities.length - 1) {
       setCurrentSlide((prev) => prev + 1);
     }
     if (isRightSwipe && currentSlide > 0) {
@@ -58,7 +118,7 @@ export const AboutSection: React.FC = () => {
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
 
-    if (isLeftSwipe && currentPillarSlide < ECONOMIC_PILLARS.length - 1) {
+    if (isLeftSwipe && currentPillarSlide < economicPillars.length - 1) {
       setCurrentPillarSlide((prev) => prev + 1);
     }
     if (isRightSwipe && currentPillarSlide > 0) {
@@ -86,7 +146,7 @@ export const AboutSection: React.FC = () => {
 
             <div>
               <blockquote className="text-xl sm:text-2xl text-[#0D031B] font-editorial italic leading-relaxed pt-2">
-                “{MISSION_STATEMENT}”
+                “{t('missionStatement')}”
               </blockquote>
             </div>
           </div>
@@ -99,7 +159,7 @@ export const AboutSection: React.FC = () => {
 
             <div>
               <blockquote className="text-xl sm:text-2xl text-[#0D031B] font-editorial italic leading-relaxed pt-2">
-                “{VISION_STATEMENT}”
+                “{t('visionStatement')}”
               </blockquote>
             </div>
           </div>
@@ -117,9 +177,9 @@ export const AboutSection: React.FC = () => {
               </h3>
             </div>
 
-            {/* Category Navigation Pills replacing arrows */}
+            {/* Category Navigation Pills */}
             <div className="flex flex-wrap items-center gap-2">
-              {ECONOMIC_PILLARS.map((pillar, pIdx) => (
+              {economicPillars.map((pillar, pIdx) => (
                 <button
                   key={pillar.id}
                   onClick={() => setCurrentPillarSlide(pIdx)}
@@ -136,7 +196,7 @@ export const AboutSection: React.FC = () => {
           </div>
 
           <p className="text-sm sm:text-base text-[#0D031B]/80 font-medium leading-relaxed mb-8">
-            As big corporations raise delivery fees and cut pay, everyday people need simple tools they control to help their own neighborhoods get fresh food, medicine, and essentials.
+            {t('pillarsDesc')}
           </p>
 
           {/* Swipable Pillar Card Frame */}
@@ -150,7 +210,7 @@ export const AboutSection: React.FC = () => {
               className="flex transition-transform duration-300 ease-out"
               style={{ transform: `translateX(-${currentPillarSlide * 100}%)` }}
             >
-              {ECONOMIC_PILLARS.map((pillar, pIdx) => (
+              {economicPillars.map((pillar, pIdx) => (
                 <div key={pillar.id} className="w-full shrink-0 px-1">
                   <div className="rounded-2xl p-7 sm:p-10 flex flex-col justify-between border-2 border-[#0D031B] shadow-[6px_6px_0px_#DAEE01] bg-[#FAF0E6] min-h-[340px]">
                     <div>
@@ -159,7 +219,7 @@ export const AboutSection: React.FC = () => {
                           {pillar.category}
                         </span>
                         <span className="font-mono text-xs text-[#0D031B] font-bold bg-[#FAF0E6] px-2 py-0.5 rounded border border-[#0D031B]">
-                          PILLAR 0{pIdx + 1} OF 0{ECONOMIC_PILLARS.length}
+                          {t('pillarWord')} 0{pIdx + 1} {t('ofWord')} 0{economicPillars.length}
                         </span>
                       </div>
 
@@ -170,14 +230,14 @@ export const AboutSection: React.FC = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                         <div className="bg-[#8FB31D]/30 p-4 sm:p-5 rounded-xl border-2 border-[#0D031B]">
                           <div className="text-[11px] font-mono font-bold text-[#0D031B] bg-[#0D031B] text-[#DAEE01] px-2 py-0.5 rounded inline-block uppercase tracking-wide mb-2">
-                            [ THE PROBLEM ]
+                            {t('theProblem')}
                           </div>
                           <p className="text-xs sm:text-sm text-[#0D031B] font-medium leading-relaxed">{pillar.problem}</p>
                         </div>
 
                         <div className="bg-[#FAF0E6] p-4 sm:p-5 rounded-xl border-2 border-[#0D031B]">
                           <div className="text-[11px] font-mono font-bold text-[#FAF0E6] bg-[#806517] px-2 py-0.5 rounded inline-block uppercase tracking-wide mb-2 border border-[#0D031B]">
-                            [ OUR SOLUTION ]
+                            {t('ourSolution')}
                           </div>
                           <p className="text-xs sm:text-sm text-[#0D031B] font-medium leading-relaxed">{pillar.solution}</p>
                         </div>
@@ -189,7 +249,7 @@ export const AboutSection: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-[#806517]" />
                         <span>{pillar.metric}</span>
                       </div>
-                      <span className="text-[11px] text-[#0D031B]/60 font-mono">← Swipe on mobile or tap pills above →</span>
+                      <span className="text-[11px] text-[#0D031B]/60 font-mono">{t('swipeNavPillars')}</span>
                     </div>
                   </div>
                 </div>
@@ -210,9 +270,9 @@ export const AboutSection: React.FC = () => {
               </h3>
             </div>
 
-            {/* Direct Activity Navigation Pills replacing arrows */}
+            {/* Direct Activity Navigation Pills */}
             <div className="flex flex-wrap items-center gap-2">
-              {CORE_ACTIVITIES.map((act, index) => (
+              {coreActivities.map((act, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
@@ -239,13 +299,13 @@ export const AboutSection: React.FC = () => {
               className="flex transition-transform duration-300 ease-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              {CORE_ACTIVITIES.map((act, index) => (
+              {coreActivities.map((act, index) => (
                 <div key={index} className="w-full shrink-0 px-1">
                   <div className="p-7 sm:p-10 rounded-2xl flex flex-col justify-between border-2 border-[#0D031B] shadow-[6px_6px_0px_#DAEE01] bg-[#FAF0E6] min-h-[260px]">
                     <div>
                       <div className="flex items-center gap-2 mb-4">
                         <span className="text-xs font-mono font-bold text-[#DAEE01] bg-[#0D031B] px-2.5 py-1 rounded border border-[#0D031B]">
-                          [ 0{index + 1} OF 0{CORE_ACTIVITIES.length} ]
+                          [ 0{index + 1} {t('ofWord')} 0{coreActivities.length} ]
                         </span>
                         <span className="text-xs font-mono font-bold text-[#806517] uppercase bg-[#8FB31D]/40 px-2.5 py-1 rounded border border-[#0D031B]">
                           {act.subtitle}
@@ -260,8 +320,8 @@ export const AboutSection: React.FC = () => {
                     </div>
 
                     <div className="mt-8 pt-4 border-t-2 border-[#0D031B] flex items-center justify-between text-xs font-mono text-[#0D031B]/70">
-                      <span>← Swipe on mobile or tap pills above to navigate →</span>
-                      <span className="font-bold text-[#806517]">Step 0{index + 1}</span>
+                      <span>{t('swipeNavActivities')}</span>
+                      <span className="font-bold text-[#806517]">{t('stepWord')} 0{index + 1}</span>
                     </div>
                   </div>
                 </div>

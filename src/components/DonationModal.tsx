@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { X, Heart, ShieldCheck, Check, Copy } from 'lucide-react';
+import { useAccessibility } from '../context/AccessibilityContext';
 
 interface DonationModalProps {
   isOpen: boolean;
@@ -14,6 +15,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
   initialAmount,
   initialMonthly
 }) => {
+  const { t } = useAccessibility();
   const [amount, setAmount] = useState<number>(initialAmount || 50);
   const [isMonthly] = useState<boolean>(initialMonthly || false);
   const [donorName, setDonorName] = useState('');
@@ -63,10 +65,10 @@ Tax Status: Fully tax-deductible under Section 501(c)(3) of the Internal Revenue
           <div>
             <div className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#0D031B] bg-[#8FB31D] px-2.5 py-1 rounded-md border border-[#0D031B] mb-3">
               <ShieldCheck className="w-4 h-4 text-[#806517]" />
-              <span>[ TAX-DEDUCTIBLE 501(c)(3) GIFT ]</span>
+              <span>{t('taxDeductibleGift')}</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold text-[#0D031B] font-editorial mb-2 leading-tight">
-              Support FOSS For The Common Need
+              {t('supportTitle')}
             </h3>
             <p className="text-xs text-[#0D031B]/80 leading-relaxed mb-6 font-medium">
               Processed through our 501(c)(3) fiscal sponsor. Your contribution directly funds open-source
@@ -77,7 +79,7 @@ Tax Status: Fully tax-deductible under Section 501(c)(3) of the Internal Revenue
               {/* Amount & Frequency summary */}
               <div className="bg-[#8FB31D]/20 p-4 rounded-xl border-2 border-[#0D031B] flex items-center justify-between">
                 <div>
-                  <div className="text-xs font-mono text-[#0D031B] font-bold">Selected Contribution</div>
+                  <div className="text-xs font-mono text-[#0D031B] font-bold">{t('selectedContribution')}</div>
                   <div className="text-2xl font-bold text-[#0D031B] font-mono">
                     ${amount}.00 USD <span className="text-xs font-medium text-[#0D031B]">{isMonthly ? '/ mo' : '(one-time)'}</span>
                   </div>
@@ -104,7 +106,7 @@ Tax Status: Fully tax-deductible under Section 501(c)(3) of the Internal Revenue
               <div className="space-y-3">
                 <div>
                   <label className="block text-xs font-mono font-bold uppercase tracking-wider text-[#0D031B] mb-1">
-                    Your Name (for Tax Receipt)
+                    {t('yourName')}
                   </label>
                   <input
                     type="text"
@@ -117,7 +119,7 @@ Tax Status: Fully tax-deductible under Section 501(c)(3) of the Internal Revenue
 
                 <div>
                   <label className="block text-xs font-mono font-bold uppercase tracking-wider text-[#0D031B] mb-1">
-                    Email Address (to receive Official Receipt) *
+                    {t('emailAddress')}
                   </label>
                   <input
                     type="email"
@@ -133,7 +135,7 @@ Tax Status: Fully tax-deductible under Section 501(c)(3) of the Internal Revenue
               {/* Payment Method Selector */}
               <div>
                 <label className="block text-xs font-mono font-bold uppercase tracking-wider text-[#0D031B] mb-1">
-                  Payment Method
+                  {t('paymentMethod')}
                 </label>
                 <div className="grid grid-cols-3 gap-2">
                   <button
@@ -145,7 +147,7 @@ Tax Status: Fully tax-deductible under Section 501(c)(3) of the Internal Revenue
                         : 'bg-[#FAF0E6] text-[#0D031B] border-[#0D031B]'
                     }`}
                   >
-                    Credit / Debit
+                    {t('creditDebit')}
                   </button>
                   <button
                     type="button"
@@ -156,7 +158,7 @@ Tax Status: Fully tax-deductible under Section 501(c)(3) of the Internal Revenue
                         : 'bg-[#FAF0E6] text-[#0D031B] border-[#0D031B]'
                     }`}
                   >
-                    Bank ACH
+                    {t('bankAch')}
                   </button>
                   <button
                     type="button"
@@ -167,7 +169,7 @@ Tax Status: Fully tax-deductible under Section 501(c)(3) of the Internal Revenue
                         : 'bg-[#FAF0E6] text-[#0D031B] border-[#0D031B]'
                     }`}
                   >
-                    DAF / Check
+                    {t('dafCheck')}
                   </button>
                 </div>
               </div>
@@ -178,7 +180,7 @@ Tax Status: Fully tax-deductible under Section 501(c)(3) of the Internal Revenue
                 className="w-full py-3.5 px-4 bg-[#806517] text-[#FAF0E6] border-2 border-[#0D031B] text-sm font-bold font-mono rounded-xl cursor-pointer shadow-[4px_4px_0px_#DAEE01] hover:bg-[#0D031B] hover:text-[#DAEE01] transition flex items-center justify-center gap-2 mt-4"
               >
                 <Heart className="w-4 h-4 fill-white/20" />
-                <span>CONFIRM ${amount}.00 CONTRIBUTION</span>
+                <span>{t('confirmContribution')} (${amount}.00)</span>
               </button>
             </form>
           </div>
@@ -190,7 +192,7 @@ Tax Status: Fully tax-deductible under Section 501(c)(3) of the Internal Revenue
             </div>
 
             <h3 className="text-2xl font-bold text-[#0D031B] font-editorial mb-1">
-              Thank You for Fueling the Commons!
+              {t('thankYouTitle')}
             </h3>
             <p className="text-xs text-[#0D031B]/80 mb-6">
               A receipt has been issued to <strong>{donorEmail}</strong>.
@@ -235,7 +237,7 @@ Tax Status: Fully tax-deductible under Section 501(c)(3) of the Internal Revenue
                 className="flex-1 py-2.5 px-4 bg-[#FAF0E6] border-2 border-[#0D031B] text-xs font-bold text-[#0D031B] rounded-xl hover:bg-[#8FB31D] transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 {copiedReceipt ? <Check className="w-4 h-4 text-[#806517]" /> : <Copy className="w-4 h-4" />}
-                <span>{copiedReceipt ? 'Receipt Copied!' : 'Copy Tax Receipt'}</span>
+                <span>{copiedReceipt ? t('taxReceiptCopied') : t('copyTaxReceipt')}</span>
               </button>
 
               <button
@@ -243,7 +245,7 @@ Tax Status: Fully tax-deductible under Section 501(c)(3) of the Internal Revenue
                 onClick={onClose}
                 className="flex-1 py-2.5 px-4 bg-[#806517] text-[#FAF0E6] border-2 border-[#0D031B] text-xs font-bold rounded-xl hover:bg-[#0D031B] hover:text-[#DAEE01] transition-colors cursor-pointer"
               >
-                Done
+                {t('done')}
               </button>
             </div>
           </div>

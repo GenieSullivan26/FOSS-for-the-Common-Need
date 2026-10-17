@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Check, Copy } from 'lucide-react';
 import { LogoMark } from './LogoMark';
+import { useAccessibility } from '../context/AccessibilityContext';
 
 interface FooterProps {
   onOpenDonate?: () => void;
@@ -8,6 +9,7 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = () => {
+  const { t } = useAccessibility();
   const [copied, setCopied] = useState(false);
   const email = 'fossforthecommonneed@proton.me';
 
@@ -28,13 +30,12 @@ export const Footer: React.FC<FooterProps> = () => {
           </div>
 
           <p className="text-[#FAF0E6]/90 leading-relaxed font-medium text-sm">
-            Creating user-controlled digital tools powered by volunteers to help local non-profits expand
-            access to free goods and services for working class families.
+            {t('footerDesc')}
           </p>
 
           {/* Contact Section */}
           <div className="pt-2 flex flex-wrap items-center gap-3 text-[#DAEE01] text-sm font-mono">
-            <span className="text-[#FAF0E6]">Get in touch with us:</span>
+            <span className="text-[#FAF0E6]">{t('getInTouch')}</span>
             <div className="inline-flex items-center gap-2 bg-[#0D031B] border-2 border-[#806517] rounded-xl px-3.5 py-2 shadow-[2px_2px_0px_#DAEE01]">
               <Mail className="w-4 h-4 text-[#8FB31D] shrink-0" />
               <a
@@ -58,7 +59,7 @@ export const Footer: React.FC<FooterProps> = () => {
             </div>
             {copied && (
               <span className="text-xs text-[#8FB31D] font-mono font-bold">
-                Copied!
+                {t('copied')}
               </span>
             )}
           </div>

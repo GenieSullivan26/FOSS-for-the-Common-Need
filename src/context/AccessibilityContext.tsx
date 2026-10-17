@@ -64,6 +64,68 @@ const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     reset: 'Reset Defaults',
     close: 'Close',
 
+    // Section Content
+    missionStatement: 'In response to centuries of stolen land and labor, FOSS For The Common Need creates user-controlled digital tools powered by volunteers to help local non-profits expand access to free goods and services for working class families.',
+    visionStatement: 'To build a future where technology is a public good, not a private commodity. We envision a world where communities own their digital infrastructure, ensuring goods and services are distributed according to need.',
+    pillarsDesc: 'As big corporations raise delivery fees and cut pay, everyday people need simple tools they control to help their own neighborhoods get fresh food, medicine, and essentials.',
+    theProblem: '[ THE PROBLEM ]',
+    ourSolution: '[ OUR SOLUTION ]',
+    pillarWord: 'PILLAR',
+    ofWord: 'OF',
+    swipeNavPillars: '← Swipe on mobile or tap pills above →',
+    swipeNavActivities: '← Swipe on mobile or tap pills above to navigate →',
+    stepWord: 'Step',
+
+    // Economic Pillars
+    p1Category: 'Family Budgets',
+    p1Title: 'Skyrocketing Delivery Costs',
+    p1Problem: 'Commercial delivery apps add extra fees and jack up prices by 30%, making it impossible for families on tight budgets to get food delivered.',
+    p1Solution: 'A free community app that connects volunteer drivers with local food pantries to bring groceries and care packages to doors at 100% zero cost.',
+    p1Metric: '100% free delivery with zero hidden fees',
+
+    p2Category: 'People in Charge',
+    p2Title: 'Corporate Delivery Apps',
+    p2Problem: 'Big-tech delivery companies underpay gig workers and trap families into costly services just to chase corporate profits.',
+    p2Solution: 'A volunteer-powered system where local drivers, charities, and families vote together on how deliveries work and where help goes first.',
+    p2Metric: 'Run by the community, not corporate executives',
+
+    p3Category: 'Non-Profits',
+    p3Title: 'Overburdened Community Groups',
+    p3Problem: 'Non-profits, mutual aid groups, and community organizations waste precious hours each week juggling messy spreadsheets and frantic phone calls just to coordinate deliveries.',
+    p3Solution: 'An easy automated tool that pairs volunteer drivers with community deliveries in one click, letting non-profits and mutual aid organizers focus on serving their neighbors.',
+    p3Metric: 'Saves 12–18 hours of busywork every week per group',
+
+    p4Category: 'Democracy',
+    p4Title: 'Towns Left Without Support',
+    p4Problem: "Local towns and neighborhoods often don't have the budget to help during crises, while private apps pull money out of the local economy.",
+    p4Solution: 'Permanent, free software that any town or neighborhood group can use forever to support one another without paying monthly fees.',
+    p4Metric: 'Free forever for any town or community group',
+
+    // Core Activities
+    act1Title: 'Design',
+    act1Subtitle: 'Building Free Delivery Tools',
+    act1Desc: 'We build easy-to-use apps that help volunteer drivers find the fastest delivery routes, match food boxes with families, and track volunteer hours.',
+
+    act2Title: 'FOSS',
+    act2Subtitle: 'Keeping the Tools Free & Public',
+    act2Desc: 'We keep all our software code public and open so that no corporation can ever buy it, privatize it, or put it behind a paywall.',
+
+    act3Title: 'Free Guides',
+    act3Subtitle: 'Simple Guides & Open Playbooks',
+    act3Desc: 'We write free, step-by-step guides so any local food bank, town hall, or neighborhood group can easily set up their own free delivery network.',
+
+    act4Title: 'Partnerships',
+    act4Subtitle: 'Listening to Everyday People',
+    act4Desc: 'We sit down directly with local food bank workers, volunteer drivers, and families to design apps that are easy, respectful, and genuinely helpful.',
+
+    // PWA Categories
+    catAll: 'All',
+    catProduce: 'Produce',
+    catPantry: 'Pantry',
+    catHotMeal: 'Hot Meal',
+    catHealth: 'Health',
+    catFamily: 'Family',
+
     // PWA Wireframe Translations
     memberPwa: '1. Member PWA',
     volunteerPwa: '2. Volunteer PWA',
@@ -140,6 +202,14 @@ const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     thankYouTitle: 'Thank You for Fueling the Commons!',
     copyTaxReceipt: 'Copy Tax Receipt',
     done: 'Done',
+    selectedContribution: 'Selected Contribution',
+    yourName: 'Your Name (for Tax Receipt)',
+    emailAddress: 'Email Address (to receive Official Receipt) *',
+    paymentMethod: 'Payment Method',
+    creditDebit: 'Credit / Debit',
+    bankAch: 'Bank ACH',
+    dafCheck: 'DAF / Check',
+    taxReceiptCopied: 'Receipt Copied!',
   },
   es: {
     about: 'Acerca de',
@@ -168,6 +238,68 @@ const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     readAloud: 'Lectura en Voz Alta',
     reset: 'Restablecer',
     close: 'Cerrar',
+
+    // Section Content
+    missionStatement: 'En respuesta a siglos de despojo de tierras y trabajo, FOSS For The Common Need crea herramientas digitales controladas por usuarios y operadas por voluntarios para ayudar a las organizaciones sin fines de lucro locales a ampliar el acceso a bienes y servicios gratuitos para familias trabajadoras.',
+    visionStatement: 'Construir un futuro donde la tecnología sea un bien público, no una mercancía privada. Imaginamos un mundo donde las comunidades sean dueñas de su infraestructura digital, garantizando que los bienes y servicios se distribuyan según las necesidades.',
+    pillarsDesc: 'A medida que las grandes corporaciones aumentan las tarifas de envío y reducen los sueldos, las personas necesitan herramientas sencillas que puedan controlar para ayudar a sus vecindarios a obtener alimentos frescos, medicinas y artículos esenciales.',
+    theProblem: '[ EL PROBLEMA ]',
+    ourSolution: '[ NUESTRA SOLUCIÓN ]',
+    pillarWord: 'PILAR',
+    ofWord: 'DE',
+    swipeNavPillars: '← Deslice en móvil o toque las pestañas →',
+    swipeNavActivities: '← Deslice en móvil o toque las pestañas para navegar →',
+    stepWord: 'Paso',
+
+    // Economic Pillars
+    p1Category: 'Presupuestos Familiares',
+    p1Title: 'Costos de Envío Desorbitados',
+    p1Problem: 'Las aplicaciones comerciales de envío agregan tarifas extra y aumentan los precios un 30%, impidiendo que las familias con presupuestos ajustados reciban alimentos.',
+    p1Solution: 'Una aplicación comunitaria gratuita que conecta a repartidores voluntarios con bancos de alimentos locales para llevar despensas a la puerta a un costo 100% cero.',
+    p1Metric: 'Entrega 100% gratuita sin tarifas ocultas',
+
+    p2Category: 'Personas al Mando',
+    p2Title: 'Aplicaciones de Envío Corporativas',
+    p2Problem: 'Las grandes empresas de envíos pagan mal a los trabajadores y atrapan a las familias en servicios costosos solo para obtener ganancias corporativas.',
+    p2Solution: 'Un sistema operado por voluntarios donde repartidores locales, organizaciones y familias votan juntos sobre cómo funcionan los envíos y dónde va la ayuda primero.',
+    p2Metric: 'Gestionado por la comunidad, no por ejecutivos corporativos',
+
+    p3Category: 'Non-Profits',
+    p3Title: 'Grupos Comunitarios Sobrecargados',
+    p3Problem: 'Organizaciones sin fines de lucro y grupos de ayuda mutua pierden horas valiosas cada semana manejando hojas de cálculo y llamadas telefónicas para coordinar entregas.',
+    p3Solution: 'Una herramienta automatizada y sencilla que conecta repartidores voluntarios con entregas comunitarias en un clic, permitiendo a los organizadores enfocarse en servir a sus vecinos.',
+    p3Metric: 'Ahorra de 12 a 18 horas de papeleo cada semana por grupo',
+
+    p4Category: 'Democracia',
+    p4Title: 'Comunidades Sin Apoyo',
+    p4Problem: 'Las comunidades locales a menudo no tienen presupuesto para ayudar durante las crisis, mientras que las aplicaciones privadas extraen dinero de la economía local.',
+    p4Solution: 'Software permanente y gratuito que cualquier comunidad o grupo de vecindarios puede usar para apoyarse mutuamente sin pagar tarifas mensuales.',
+    p4Metric: 'Gratis para siempre para cualquier comunidad o grupo',
+
+    // Core Activities
+    act1Title: 'Diseño',
+    act1Subtitle: 'Construyendo Herramientas Gratuitas de Entrega',
+    act1Desc: 'Creamos aplicaciones fáciles de usar que ayudan a repartidores voluntarios a encontrar rutas rápidas, entregar cajas de alimentos a familias y registrar sus horas.',
+
+    act2Title: 'Software Libre',
+    act2Subtitle: 'Manteniendo las Herramientas Libres y Públicas',
+    act2Desc: 'Mantenemos todo nuestro código público y abierto para que ninguna corporación pueda comprarlo, privatizarlo ni cobrar por su uso.',
+
+    act3Title: 'Guías Gratuitas',
+    act3Subtitle: 'Guías Sencillas y Manuales Abiertos',
+    act3Desc: 'Escribimos guías gratuitas paso a paso para que cualquier banco de alimentos, alcaldía o grupo local pueda instalar su propia red de entregas.',
+
+    act4Title: 'Alianzas',
+    act4Subtitle: 'Escuchando a las Personas',
+    act4Desc: 'Nos reunimos directamente con trabajadores de bancos de alimentos, repartidores voluntarios y familias para diseñar aplicaciones respetuosas y útiles.',
+
+    // PWA Categories
+    catAll: 'Todos',
+    catProduce: 'Frutas y Verduras',
+    catPantry: 'Despensa',
+    catHotMeal: 'Comida Caliente',
+    catHealth: 'Salud',
+    catFamily: 'Familia',
 
     // PWA Wireframe Translations
     memberPwa: '1. App Miembro',
@@ -236,7 +368,7 @@ const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     cboFederationPriority: 'Prioridad de Enrutamiento de la Red',
 
     // Footer & Donation
-    footerDesc: 'Creando herramientas digitales controladas por usuarios y operadas por voluntarios para expandir el acceso a bienes gratuitos.',
+    footerDesc: 'Creando herramientas digitales controladas por usuarios y operadas por voluntarios para ayudar a las organizaciones sin fines de lucro locales a ampliar el acceso a bienes y servicios gratuitos para familias trabajadoras.',
     getInTouch: 'Contáctenos:',
     copied: '¡Copiado!',
     taxDeductibleGift: '[ DONACIÓN DEDUCIBLE DE IMPUESTOS 501(c)(3) ]',
@@ -245,6 +377,14 @@ const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     thankYouTitle: '¡Gracias por Impulsar los Bienes Comunes!',
     copyTaxReceipt: 'Copiar Recibo Fiscal',
     done: 'Listo',
+    selectedContribution: 'Contribución Seleccionada',
+    yourName: 'Su Nombre (para recibo fiscal)',
+    emailAddress: 'Correo Electrónico (para recibo oficial) *',
+    paymentMethod: 'Método de Pago',
+    creditDebit: 'Tarjeta de Crédito / Débito',
+    bankAch: 'Transferencia ACH',
+    dafCheck: 'Fondo DAF / Cheque',
+    taxReceiptCopied: '¡Recibo Copiado!',
   },
   vi: {
     about: 'Giới thiệu',
@@ -253,7 +393,7 @@ const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     heroTitle: 'Xây dựng Dân chủ Kinh tế thông qua Công cụ Kỹ thuật số do Người dùng Kiểm soát.',
     heroDesc: 'FOSS For The Common Need xây dựng cơ sở hạ tầng kỹ thuật số do tình nguyện viên vận hành để giúp các tổ chức phi lợi nhuận mở rộng quyền truy cập hàng hóa miễn phí cho các gia đình công nhân.',
     missionTitle: 'Bắt nguồn từ Tự quyết. Xây dựng vì Nhu cầu Chung.',
-    charitableMission: 'SỨ MỆNH SỪ DỤNG MỤC PHI LỢI NHUẬN 501(c)(3)',
+    charitableMission: 'SỨ MỆNH PHI LỢI NHUẬN 501(c)(3)',
     systemicVision: 'TẦM NHÌN HỆ THỐNG DÀI HẠN',
     whyThisMatters: 'TẠI SAO ĐIỀU NÀY QUAN TRỌNG',
     addressingProblems: 'Giải quyết Bốn Vấn đề Hàng ngày',
@@ -273,6 +413,68 @@ const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     readAloud: 'Đọc thành Tiếng',
     reset: 'Đặt lại',
     close: 'Đóng',
+
+    // Section Content
+    missionStatement: 'Để ứng phó với hàng thế kỷ bị tước đoạt đất đai và sức lao động, FOSS For The Common Need tạo ra các công cụ kỹ thuật số do người dùng kiểm soát và tình nguyện viên vận hành nhằm giúp các tổ chức phi lợi nhuận địa phương mở rộng quyền truy cập hàng hóa và dịch vụ miễn phí cho các gia đình công nhân.',
+    visionStatement: 'Xây dựng một tương lai nơi công nghệ là hàng hóa công cộng, không phải hàng hóa tư nhân. Chúng tôi hướng tới một thế giới nơi cộng đồng làm chủ cơ sở hạ tầng kỹ thuật số của mình, đảm bảo hàng hóa và dịch vụ được phân phối theo nhu cầu.',
+    pillarsDesc: 'Khi các tập đoàn lớn tăng phí giao hàng và cắt giảm thù lao, người dân cần các công cụ đơn giản do chính họ kiểm soát để giúp xóm giềng nhận thực phẩm tươi, thuốc men và nhu yếu phẩm.',
+    theProblem: '[ VẤN ĐỀ ]',
+    ourSolution: '[ GIẢI PHÁP ]',
+    pillarWord: 'TRỤ CỘT',
+    ofWord: 'TRÊN',
+    swipeNavPillars: '← Vuốt trên di động hoặc chạm các thẻ trên →',
+    swipeNavActivities: '← Vuốt trên di động hoặc chạm các thẻ trên để chuyển →',
+    stepWord: 'Bước',
+
+    // Economic Pillars
+    p1Category: 'Ngân sách Gia đình',
+    p1Title: 'Chi phí Giao hàng Tăng cao',
+    p1Problem: 'Các ứng dụng giao hàng thương mại cộng thêm phí và tăng giá 30%, khiến các gia đình có ngân sách eo hẹp không thể đặt giao thực phẩm.',
+    p1Solution: 'Ứng dụng cộng đồng miễn phí kết nối tài xế tình nguyện với điểm cứu trợ thực phẩm địa phương để mang nhu yếu phẩm đến tận cửa với chi phí 0đ.',
+    p1Metric: 'Giao hàng miễn phí 100% không phí ẩn',
+
+    p2Category: 'Người Điều hành',
+    p2Title: 'Ứng dụng Giao hàng Thương mại',
+    p2Problem: 'Các công ty giao hàng công nghệ trả lương thấp cho tài xế và ép các gia đình dùng dịch vụ đắt đỏ chỉ để chạy theo lợi nhuận.',
+    p2Solution: 'Hệ thống do tình nguyện viên vận hành, nơi tài xế, tổ chức từ thiện và gia đình cùng biểu quyết cách thức giao hàng và nơi ưu tiên hỗ trợ.',
+    p2Metric: 'Được quản lý bởi cộng đồng, không phải giám đốc tập đoàn',
+
+    p3Category: 'Phi lợi nhuận',
+    p3Title: 'Các Nhóm Cộng đồng Quá tải',
+    p3Problem: 'Các tổ chức phi lợi nhuận và nhóm hỗ trợ mất nhiều giờ mỗi tuần để xử lý bảng tính và gọi điện thoại chỉ để điều phối giao hàng.',
+    p3Solution: 'Công cụ tự động hóa đơn giản ghép nối tài xế tình nguyện với điểm giao hàng chỉ bằng 1 cú nhấp, giúp nhà tổ chức tập trung phục vụ bà con.',
+    p3Metric: 'Tiết kiệm 12–18 giờ làm việc mỗi tuần cho mỗi nhóm',
+
+    p4Category: 'Dân chủ',
+    p4Title: 'Cộng đồng Không có Hỗ trợ',
+    p4Problem: 'Các khu phố địa phương thường không có ngân sách hỗ trợ khi khủng hoảng, trong khi ứng dụng tư nhân lại hút tiền khỏi kinh tế địa phương.',
+    p4Solution: 'Phần mềm miễn phí vĩnh viễn mà bất kỳ nhóm cộng đồng nào cũng có thể dùng để hỗ trợ lẫn nhau mà không tốn phí hàng tháng.',
+    p4Metric: 'Miễn phí vĩnh viễn cho mọi nhóm cộng đồng',
+
+    // Core Activities
+    act1Title: 'Thiết kế',
+    act1Subtitle: 'Xây dựng Công cụ Miễn phí',
+    act1Desc: 'Chúng tôi xây dựng các ứng dụng dễ sử dụng giúp tình nguyện viên tìm tuyến đường nhanh nhất, phân phát gói thực phẩm và theo dõi giờ tình nguyện.',
+
+    act2Title: 'Phần mềm Tự do',
+    act2Subtitle: 'Giữ Công cụ Miễn phí & Công cộng',
+    act2Desc: 'Chúng tôi giữ toàn bộ mã nguồn công khai để không tập đoàn nào có thể mua lại, tư nhân hóa hay thu phí người dùng.',
+
+    act3Title: 'Hướng dẫn Miễn phí',
+    act3Subtitle: 'Hướng dẫn Đơn giản & Sách Lược Mở',
+    act3Desc: 'Chúng tôi viết hướng dẫn từng bước miễn phí để mọi điểm cứu trợ thực phẩm hoặc nhóm cộng đồng có thể dễ dàng thiết lập mạng lưới giao hàng.',
+
+    act4Title: 'Đối tác',
+    act4Subtitle: 'Lắng nghe Người dân',
+    act4Desc: 'Chúng tôi trao đổi trực tiếp với nhân viên điểm phân phát, tình nguyện viên và bà con để thiết kế các ứng dụng dễ dùng, tôn trọng và hữu ích.',
+
+    // PWA Categories
+    catAll: 'Tất cả',
+    catProduce: 'Rau củ quả',
+    catPantry: 'Thực phẩm khô',
+    catHotMeal: 'Bữa ăn nóng',
+    catHealth: 'Y tế',
+    catFamily: 'Gia đình',
 
     // PWA Wireframe Translations
     memberPwa: '1. Ứng dụng Thành viên',
@@ -350,6 +552,14 @@ const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     thankYouTitle: 'Cảm ơn bạn đã đóng góp cho Cộng đồng!',
     copyTaxReceipt: 'Sao chép Hóa đơn Thuế',
     done: 'Hoàn tất',
+    selectedContribution: 'Khoản đóng góp đã chọn',
+    yourName: 'Tên của bạn (Hóa đơn thuế)',
+    emailAddress: 'Địa chỉ Email (Nhận hóa đơn) *',
+    paymentMethod: 'Phương thức thanh toán',
+    creditDebit: 'Thẻ tín dụng / Ghi nợ',
+    bankAch: 'Chuyển khoản Ngân hàng',
+    dafCheck: 'Quỹ DAF / Séc',
+    taxReceiptCopied: 'Đã sao chép Hóa đơn!',
   },
   zh: {
     about: '关于我们',
@@ -378,6 +588,68 @@ const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     readAloud: '朗读文本 (Text-to-Speech)',
     reset: '重置默认',
     close: '关闭',
+
+    // Section Content
+    missionStatement: '为应对几个世纪以来被剥夺的土地与劳动，FOSS For The Common Need 构建由用户控制、志愿者驱动的开源数字基础设施，帮助本地非营利组织向工薪阶层家庭扩大免费日常物资与服务的普及。',
+    visionStatement: '构建一个将技术视为公共产品而非私人商品的未来。我们憧憬这样一个世界：社区拥有自己的数字基础设施，确保物资与服务严格按照需求进行平等分发。',
+    pillarsDesc: '随着商业巨头不断提高配送费并削减劳动报酬，普通民众需要由自己完全掌控的简便工具，帮助邻里社区获取新鲜食物、药品和生活必需品。',
+    theProblem: '[ 存在的问题 ]',
+    ourSolution: '[ 我们的解决方案 ]',
+    pillarWord: '支柱',
+    ofWord: '/',
+    swipeNavPillars: '← 在移动端滑动或点击上方标签切换 →',
+    swipeNavActivities: '← 在移动端滑动或点击上方卡片导航 →',
+    stepWord: '步骤',
+
+    // Economic Pillars
+    p1Category: '家庭预算',
+    p1Title: '飞涨的配送成本',
+    p1Problem: '商业配送软件加收额外服务费并将物资价格抬高30%，使得预算紧张的家庭无法承受配送服务。',
+    p1Solution: '一款免费的社区应用，将志愿者驱动的配送员与本地物资点连接起来，将食品包以100%零成本送达家门口。',
+    p1Metric: '100% 免费配送，零隐藏费用',
+
+    p2Category: '掌权者',
+    p2Title: '商业垄断配送平台',
+    p2Problem: '大型科技配送公司削减零工工人报酬，将家庭锁入昂贵的服务中，仅为了追逐商业利润。',
+    p2Solution: '由志愿者驱动的系统，本地配送员、慈善机构与受助家庭共同投票决定配送方式与优先援助顺序。',
+    p2Metric: '由社区共同运营，而非商业高管掌控',
+
+    p3Category: 'Non-Profits',
+    p3Title: '不堪重负的社区组织',
+    p3Problem: '非营利组织与互助小组每周浪费宝贵的时间来整理繁琐的表格和接听电话，仅为了协调物资配送。',
+    p3Solution: '简便的一键式自动化工具，将志愿者配送员与社区需求精准匹配，让组织者专注于服务邻里。',
+    p3Metric: '每个小组每周可节省 12–18 小时的繁琐工作',
+
+    p4Category: 'Democracy',
+    p4Title: '缺乏支持的城镇与社区',
+    p4Problem: '本地城镇与社区在危机期间常常缺乏救助预算，而商业软件又不断从本地经济中抽走资金。',
+    p4Solution: '永久免费的开源软件，任何城镇或社区小组都可以永久免费使用，相互扶持而无需支付月费。',
+    p4Metric: '面向任何城镇或社区小组永久免费',
+
+    // Core Activities
+    act1Title: '设计',
+    act1Subtitle: '构建免费配送工具',
+    act1Desc: '我们开发简单易用的应用程序，帮助志愿者配送员规划最快的路线、将物资精准分配至各家庭并记录服务时长。',
+
+    act2Title: '开源软件',
+    act2Subtitle: '保障工具公共与永久免费',
+    act2Desc: '我们保持所有软件代码公开透明，确保没有任何商业公司能够收购、私有化或将其置于付费墙之后。',
+
+    act3Title: '免费指南',
+    act3Subtitle: '简明指南与开源操作手册',
+    act3Desc: '我们编写免费的分步指南，让任何本地食品库、社区中心或邻里小组都能轻松搭建属于自己的免费配送网络。',
+
+    act4Title: '社区合作',
+    act4Subtitle: '倾听社区与群众的声音',
+    act4Desc: '我们与本地食品库工作人员、志愿者配送员和受助家庭坐在一起，设计真正简单、尊重且切实有用的软件。',
+
+    // PWA Categories
+    catAll: '全部',
+    catProduce: '生鲜果蔬',
+    catPantry: '粮油干货',
+    catHotMeal: '热餐熟食',
+    catHealth: '医疗健康',
+    catFamily: '母婴家庭',
 
     // PWA Wireframe Translations
     memberPwa: '1. 居民端 PWA',
@@ -455,6 +727,14 @@ const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     thankYouTitle: '感谢您为公共事业助力！',
     copyTaxReceipt: '复制捐赠收据',
     done: '完成',
+    selectedContribution: '已选捐赠金额',
+    yourName: '您的姓名（用于捐赠收据）',
+    emailAddress: '电子邮箱（接收官方收据）*',
+    paymentMethod: '支付方式',
+    creditDebit: '信用卡 / 借记卡',
+    bankAch: '银行 ACH 转账',
+    dafCheck: 'DAF 基金 / 支票',
+    taxReceiptCopied: '已复制捐赠收据！',
   },
   ar: {
     about: 'عن المبادرة',
@@ -483,6 +763,68 @@ const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     readAloud: 'القراءة الصوتية النصية',
     reset: 'إعادة ضبط',
     close: 'إغلاق',
+
+    // Section Content
+    missionStatement: 'رداً على قرون من استغلال الأراضي والعمالة، تُنشئ FOSS For The Common Need أدوات رقمية مجانية يديرها متطوعون لمساعدة الجمعيات المحلية على توفير السلع والخدمات المجانية للأسر العاملة.',
+    visionStatement: 'بناء مستقبل تكون فيه التكنولوجيا خيرًا عامًا وليست سلعة خاصة. نطمح إلى عالم تمتلك فيه المجتمعات بنيتها التحتية الرقمية، مما يضمن توزيع السلع والخدمات وفقًا للحاجة.',
+    pillarsDesc: 'مع رفع الشركات الكبرى لرسوم التوصيل وتخفيض الأجور، يحتاج عامة الناس إلى أدوات بسيطة يتحكمون فيها لمساعدة أحيائهم للحصول على الأغذية الطازجة والأدوية والمستلزمات الأساسية.',
+    theProblem: '[ المشكلة ]',
+    ourSolution: '[ حلنا ]',
+    pillarWord: 'الركيزة',
+    ofWord: 'من',
+    swipeNavPillars: '← اسحب على الهاتف أو اضغط على الأزرار أعلاه →',
+    swipeNavActivities: '← اسحب على الهاتف أو انقر فوق الأزرار للتنقل →',
+    stepWord: 'الخطوة',
+
+    // Economic Pillars
+    p1Category: 'ميزانيات الأسرة',
+    p1Title: 'تكاليف التوصيل المرتفعة',
+    p1Problem: 'تضيف تطبيقات التوصيل التجارية رسومًا إضافية وترفع الأسعار بنسبة 30%، مما يجعل توصيل الطعام مستحيلاً للأسر ذات الميزانيات المحدودة.',
+    p1Solution: 'تطبيق مجتمعي مجاني يربط السائقين المتطوعين بالمراكز المحلية لتوصيل المواد الغذائية وحزم الرعاية إلى الأبواب مجانًا بنسبة 100%.',
+    p1Metric: 'توصيل مجاني 100% بدون أي رسوم خفية',
+
+    p2Category: 'الأشخاص المسؤولون',
+    p2Title: 'تطبيقات التوصيل التجارية',
+    p2Problem: 'تدفع شركات التوصيل الكبرى أجورًا متدنية للعمال وتوقع الأسر في خدمات مكلفة بحثًا عن أرباح الشركات.',
+    p2Solution: 'نظام يديره المتطوعون حيث يصوت السائقون والجمعيات والأسر معا حول كيفية عمل التوصيل وأولويات المساعدة.',
+    p2Metric: 'يدار من قبل المجتمع وليس من قبل التنفيذيين',
+
+    p3Category: 'Non-Profits',
+    p3Title: 'المجموعات المجتمعية المجهدة',
+    p3Problem: 'تضيع المنظمات غير الربحية ومجموعات التضامن ساعات ثمينة أسبوعيًا في إدارة الجداول والاتصالات للتنسيق.',
+    p3Solution: 'أداة مؤتمتة بسيطة تربط السائقين المتطوعين بالتوصيلات المجتمعية بضغطة زر، مما يتيح للمنظمات التركيز على خدمة الجيران.',
+    p3Metric: 'يوفر 12-18 ساعة من العمل الإداري أسبوعيًا لكل مجموعة',
+
+    p4Category: 'Democracy',
+    p4Title: 'البلدات المتروكة دون دعم',
+    p4Problem: 'غالباً ما تفتقر البلدات والأحياء إلى الميزانية المخصصة للمساعدة أثناء الأزمات، بينما تسحب التطبيقات الخاصة الأموال.',
+    p4Solution: 'برمجيات دائمة ومجانية يمكن لأي بلدة أو مجموعة استخدامها للأبد لدعم بعضهم البعض دون دفع رسوم شهرية.',
+    p4Metric: 'مجاني للأبد لأي بلدة أو مجموعة مجتمعية',
+
+    // Core Activities
+    act1Title: 'التصميم',
+    act1Subtitle: 'بناء أدوات توصيل مجانية',
+    act1Desc: 'نبني تطبيقات سهلة الاستخدام تساعد السائقين المتطوعين في العثور على أسرع الطرق وتوزيع حزم الأغذية وتسجيل ساعات التطوع.',
+
+    act2Title: 'البرمجيات الحرة',
+    act2Subtitle: 'الحفاظ على الأدوات مجانية وعامة',
+    act2Desc: 'نحافظ على جميع شفرات البرمجيات مفتوحة وعامة حتى لا تتمكن أي شركة من شرائها أو خصخصتها أو فرض رسوم عليها.',
+
+    act3Title: 'الأدلة المجانية',
+    act3Subtitle: 'أدلة بسيطة وكتيبات مفتوحة',
+    act3Desc: 'نكتب أدلة مجانية خطوة بخطوة حتى يتمكن أي بنك طعام أو بلدية أو مجموعة أهليّة من إنشاء شبكة توصيل مجانية.',
+
+    act4Title: 'الشراكات',
+    act4Subtitle: 'الاستماع إلى الناس',
+    act4Desc: 'نجلس مباشرة مع عمال بنوك الطعام والسائقين المتطوعين والأسر لتصميم تطبيقات سهلة ومحترمة ومفيدة حقًا.',
+
+    // PWA Categories
+    catAll: 'الكل',
+    catProduce: 'خضار وفواكه',
+    catPantry: 'المؤن',
+    catHotMeal: 'وجبات ساخنة',
+    catHealth: 'الصحة',
+    catFamily: 'الأسرة',
 
     // PWA Wireframe Translations
     memberPwa: '1. تطبيق المستفيد',
@@ -560,6 +902,14 @@ const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     thankYouTitle: 'شكراً لدعمك للخير العام!',
     copyTaxReceipt: 'نسخ إيصال التبرع',
     done: 'تم',
+    selectedContribution: 'المساهمة المختارة',
+    yourName: 'اسمك (لإيصال الضريبة)',
+    emailAddress: 'البريد الإلكتروني (لإيصال الدفع) *',
+    paymentMethod: 'طريقة الدفع',
+    creditDebit: 'بطاقة ائتمان / خصم',
+    bankAch: 'تحويل بانكي ACH',
+    dafCheck: 'صندوق DAF / شيك',
+    taxReceiptCopied: 'تم نسخ الإيصال!',
   },
 };
 
