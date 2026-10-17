@@ -1,0 +1,6 @@
+{
+  "name": "FOSS For The Common Need",
+  "description": "Informational website for the fiscally sponsored 501(c)(3) project building open-source civic logistics and volunteer infrastructure on Decidim Ruby on Rails.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
